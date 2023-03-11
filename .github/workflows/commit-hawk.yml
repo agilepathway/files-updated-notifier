@@ -1,0 +1,19 @@
+name: hawk
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'README.md'
+
+jobs:
+  hawk:
+    name: hawk
+    runs-on: ubuntu-latest
+    
+    steps:
+    - name: CommitHawk
+      uses: jesalg/commit-hawk-action@v1.1
+      with:
+        slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
+        slack_message: 'Contents of some important file were changed on main'
