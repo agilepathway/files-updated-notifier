@@ -16,4 +16,4 @@ jobs:
       uses: jesalg/commit-hawk-action@v1.1
       with:
         slack_webhook_url: ${{ secrets.SLACK_WEBHOOK_URL }}
-        slack_message: 'Contents of some important file were changed on main'
+        slack_message: 'One or more files you are tracking were changed:'
